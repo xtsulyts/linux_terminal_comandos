@@ -1,0 +1,12 @@
+###POSTGRES###
+
+###entrar a usuario postgres###
+sudo -ui postgres psql
+
+###crear usuarios###
+postgres=# CREATE USER lenny WITH PASSWORD 'leonard';
+postgres=# CREAR BASE DE DATOS my_project OWNER lenny;
+
+
+
+
