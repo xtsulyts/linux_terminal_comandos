@@ -1,11 +1,21 @@
 ###POSTGRES###
 
 ###entrar a usuario postgres###
-sudo -ui postgres psql
+sudo -u postgres psql
 
 ###crear usuarios###
 postgres=# CREATE USER lenny WITH PASSWORD 'leonard';
 postgres=# CREAR BASE DE DATOS my_project OWNER lenny;
+
+###renombrar databases###
+postgres=# ALTER DATABASE olddbname RENAME TO newdbname;
+
+###iniciar y apagar servidor###
+postgres=# sudo systemctl start postgresql
+postgres=# sudo systemctl stop postgresql
+
+###estado del servidor enabled/disabel###
+postgres=# systemctl status postgresql
 
 
 
